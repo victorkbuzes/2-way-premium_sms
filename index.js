@@ -24,7 +24,7 @@ app.use('/', smsRoter);
 mongoose.set('strictQuery', false);
 
 const mongoString = process.env.DB_CONNECTION
-mongoose.connect(mongoString )
+mongoose.connect("mongodb+srv://victorkbuzes:33947267@cluster0.g6d5v3j.mongodb.net/?retryWrites=true&w=majority" || mongoString )
     .then(() => {
         console.log("Connected to Mongodb");
     })
