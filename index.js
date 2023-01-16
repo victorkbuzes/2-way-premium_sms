@@ -22,11 +22,9 @@ app.use('/', smsRoter);
     
     //mongodb
 mongoose.set('strictQuery', false);
-mongoose.connect(
-    process.env.DB_CONNECTION, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
+
+const mongoString = process.env.DB_CONNECTION
+mongoose.connect(mongoString )
     .then(() => {
         console.log("Connected to Mongodb");
     })
