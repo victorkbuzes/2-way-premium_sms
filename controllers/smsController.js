@@ -10,7 +10,7 @@ const message = "Test Api"
 
 const userInput = router.get("/users/:number", getUserByID)
 // Your login credentials
-const shortCode = '2345'
+const shortCode = '32192'
 
 
 const username = 'sandbox'
@@ -28,8 +28,8 @@ const sms = AfricasTalking.SMS
 
 
 exports.received = (req, res) => {
-    var body = req.body;
-    if (body.to == '2345') {
+    var body = User.number;
+    if (body.to == '32192') {
         sendResponse(body.from, userInput)
         
     } else {
